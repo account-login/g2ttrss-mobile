@@ -893,7 +893,13 @@ function getTitle() {
 }
 
 function load() {
-   if (typeof ($.cookie('g2tt_sid')) === 'undefined') {
+	if(typeof($.cookie('g2tt_sid')) === 'undefined')
+	{
+		if(typeof($.cookie('ttrss_sid')) !== 'undefined')
+			$.cookie('g2tt_sid', $.cookie('ttrss_sid'));
+	}
+
+    if (typeof ($.cookie('g2tt_sid')) === 'undefined') {
         $('#main').addClass('hidden');
         $('.login').removeClass('hidden');
     } else if (pref_StartInCat == '1') {
