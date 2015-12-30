@@ -25,7 +25,7 @@ How to use it?
 You should install the files in a directory on the same host as your TT-RSS install.
 As the webapp uses AJAX calls to access the API, it should be hosted on the **same domain name**.
 G2TTRSS assumes that your TT-RSS install is located at `<your-domain>/tt-rss`, if this is not the case
-edit `js/g2tt.js` and change `global_ttrssUrl` (line 2) to point to the correct location.
+edit `js/g2tt-config.js` and change `global_ttrssUrl` (line 2) to point to the correct location.
 If the webapp is installed in a subdirectory of TT-RSS, it could be wiped on an update to TT-RSS
 so after each update of TT-RSS, you may need to reinstall G2TTRSS.
 
@@ -51,8 +51,19 @@ Current features
 * login/logout support
 * load more articles (15 at a time)
 * search for keywords in feeds
+* Google Reader style hotkeys (`j`, `k`, `n`, `p`, `o`, `m`)
 
 Future features are tracked as issues.
+
+Hotkeys
+-------
+
+* `j` - Jump and expand next item.
+* `k` - Jump and expand previous item.
+* `n` - Jump to next item.
+* `p` - Jump to previous item.
+* `o` - Expand/collapse current item.
+* `m` - Mark current item as read/unread.
 
 Configuration Options
 ---------------------
